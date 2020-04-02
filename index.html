@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Form Validator</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" class="form"></form>
+      <h2>
+        <div class="formcontrol">
+          <label for="usermane">Usermane</label>
+          <input type="text" id="username" placeholder="Enter username" />
+          <small>Error message</small
+          ><!–– for showing error msg below the field––>
+        </div>
+        <div class="formcontrol">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email" />
+          <small>Error message</small
+          ><!–– for showing error msg below the field––>
+        </div>
+        <div class="formcontrol">
+          <label for="Password">Password</label>
+          <input type="password" id="Password" placeholder="Enter password" />
+          <small>Error message</small
+          ><!–– for showing error msg below the field––>
+        </div>
+        <div class="formcontrol">
+          <label for="confirmPassowrd">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassowrd"
+            placeholder="Confirm password"
+          />
+          <small>Error message</small
+          ><!–– for showing error msg below the field––>
+        </div>
+        <button>Submit</button>
+      </h2>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
