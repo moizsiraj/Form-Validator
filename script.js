@@ -40,7 +40,7 @@ function checkLength(input, min, max) {
 }
 
 function isRequired(inputArray) {
-  inputArray.forEach(function(input) {
+  inputArray.forEach(function (input) {
     input.getI;
     if (input.value.trim() === "") {
       onError(input, `${getFieldName(input)} is required`);
@@ -51,14 +51,12 @@ function isRequired(inputArray) {
 }
 
 function checkPasswords(password, confirmPassword) {
-  if (password.value === confirmPassword.value) {
-    onSuccess(confirmPassword);
-  } else {
+  if (password.value !== confirmPassword.value) {
     onError(confirmPassword, "Passwords do not match");
   }
 }
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
   // if (username.value === "") {
   //   onError(username, "Username is required");
@@ -84,7 +82,6 @@ form.addEventListener("submit", function(e) {
   // } else {
   //   onSuccess(passwordConfirm);
   // }
-
   isRequired([username, email, password, passwordConfirm]);
   checkLength(username, 3, 8);
   checkLength(password, 8, 15);
